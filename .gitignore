@@ -1,0 +1,27 @@
+# fichiers systemes
+.DS_Store
+
+# fichiers textmate
+.tm_properties
+
+# projet spip : les fichiers et dossiers ignorés
+htaccess.txt
+.htaccess
+/config
+/ecrire
+/extensions
+/IMG
+index.php
+/local
+/prive
+rien.gif
+spip.php
+/squelettes-dist
+svn.revision
+/tmp
+/plugins/*
+/plugins-dist
+spip.png
+
+# excepte
+!/plugins/howto
