@@ -124,6 +124,15 @@
       .liste .item div {margin-left: 20px;}
 
 
+/*   =Documents
+   ------------------------------------------------------ */
+   .spip_documents .spip_doc_titre {font-size: .8em;}
+   .spip_documents_center {
+      display: block; clear: both;
+      width: 100%;
+      margin: 2em auto;
+   }
+
 /*   =Pied de page
    ------------------------------------------------------ */
    #pied {font-size: .75em;}
