@@ -1,7 +1,7 @@
 <paquet
    prefix="howto"
    categorie="squelette"
-   version="1.0.0"
+   version="2.0.0"
    etat="dev"
    compatibilite="[3.0.2;3.0.*]"
    logo=""
@@ -13,9 +13,8 @@
    <licence>GNU/GPL</licence>
    <pipeline nom="insert_head_css" inclure="howto_pipelines.php" />
    <pipeline nom="insert_head" inclure="howto_pipelines.php" />
-   <pipeline nom="jqueryui_plugins" inclure="howto_pipelines.php" />
-
-   <!-- <necessite nom="Z" compatibilite="[1.7.21;]" /> -->
+   <necessite id="Zcore" version="[2.0.0;]" />
+   <necessite id="Z5" version="[2.0.1;]" />
    <!-- <necessite nom="menus" compatibilite="[1.2.1;]" /> -->
-   <utilise nom="medias" compatibilite="[2.7.28;[" />
+   <!-- <utilise nom="medias" compatibilite="[2.7.28;[" /> -->
 </paquet>
