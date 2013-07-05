@@ -1,0 +1,40 @@
+/*============================
+=            =nav            =
+============================*/
+
+.nav {
+    font-family: $sans-font-family;
+}
+
+/*==========  nav--prev-next  ==========*/
+.nav--prev-next {
+    @include font-size(14px);
+    .prev {
+        &:after {
+            content: '|';
+            color: #ccc;
+        }
+    }
+}
+
+/*==========  nav--secondary  ==========*/
+.nav--secondary {
+    > li {
+        @include font-size(14px);
+    }
+}
+
+/*==========  nav--footer  ==========*/
+.nav--footer {
+    border-top: 2px solid $border-color;
+    padding-top: $base-spacing-unit;
+    > li {
+        a {
+            margin-right: $half-spacing-unit/2;
+            color: lighten(#000,60%);
+        }
+    }
+}
+
+/*-----  End of =nav  ------*/
+

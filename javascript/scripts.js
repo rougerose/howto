@@ -1,23 +1,12 @@
 $(document).ready(function() {
-   // ====================================
-   // = bouton d'activation de la grille =
-   // ====================================
-      $("#spip-admin").append("<a class='spip-admin-boutons grid_tg' href='#'>Grille</a>");
-      $(".grid_tg").click(function(){
-      	$("html").toggleClass("grid");
-         return false;
-      });
+    $("#toc").each(function(){
+        var $toc = $(this),
+        $trigger = $toc.find("#toc-trigger");
+        $panel = $toc.find(".dropdown--panel");
 
-   // ====================================
-   // = navigation principal : accordeon =
-   // ====================================
-
-   $("#nav .nav").accordion({
-      autoHeight: false,
-      navigation: true,
-      icons: false,
-      event: "mouseover"
-   });
-
-
+        $trigger.click(function(){
+            $(this).toggleClass("active");
+            $panel.toggleClass("active");
+        })
+    });
 });
