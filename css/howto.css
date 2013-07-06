@@ -2722,6 +2722,9 @@ a {
     position: relative;
     top: 1px; }
 
+a.active {
+  font-weight: 700; }
+
 /*-----  End of base  ------*/
 /*=============================
 =            =page            =
@@ -2848,17 +2851,24 @@ html {
 
 /*==========  nav--secondary  ==========*/
 .nav--secondary > li {
+  display: block;
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.71429; }
+  .nav--secondary > li:first-child {
+    margin-top: 48px; }
 
 /*==========  nav--footer  ==========*/
 .nav--footer {
   border-top: 2px solid #e94304;
   padding-top: 24px; }
-  .nav--footer > li a {
-    margin-right: 6px;
-    color: #999999; }
+  .nav--footer > li {
+    font-size: 12px;
+    font-size: 0.75rem;
+    line-height: 2; }
+    .nav--footer > li a {
+      margin-right: 6px;
+      color: #999999; }
 
 /*-----  End of =nav  ------*/
 /*=============================
@@ -2917,12 +2927,6 @@ html {
     font-size: 0.875rem;
     line-height: 1.71429;
     line-height: 1.2; }
-    .toc--container .toc > li > a {
-      display: inline-block;
-      margin-bottom: 0.5em;
-      font-weight: 700; }
-    .toc--container .toc ol > li {
-      margin-bottom: .5em; }
 
 .toc {
   margin-left: 0;
@@ -2930,8 +2934,29 @@ html {
   .toc ol {
     margin-left: 1em;
     list-style-type: none; }
+    .toc ol > li {
+      margin-bottom: 0.5em; }
+  .toc > li {
+    margin-bottom: 1em; }
+    .toc > li > a {
+      font-weight: 700;
+      line-height: 1.8; }
 
 /*-----  End of toc  ------*/
+/*================================
+=            headings            =
+================================*/
+h2.spip {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1; }
+
+h3.spip {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2; }
+
+/*-----  End of headings  ------*/
 /*=============================
 =            =MISC            =
 =============================*/

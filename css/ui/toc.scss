@@ -12,18 +12,6 @@
     .toc {
         @include font-size(14px);
         line-height: 1.2;
-        > li {
-            > a {
-                display: inline-block;
-                margin-bottom: 0.5em;
-                font-weight: 700;
-            }
-        }
-        ol {
-            > li {
-                margin-bottom: .5em;
-            }
-        }
     }
 }
 .toc {
@@ -32,6 +20,17 @@
     ol {
         margin-left: 1em;
         list-style-type: none;
+        > li {
+            margin-bottom: 0.5em;
+        }
+    }
+    > li {
+        margin-bottom: 1em;
+        > a {
+            font-weight: 700;
+            line-height: 1.8;
+
+        }
     }
 }
 

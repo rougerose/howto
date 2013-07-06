@@ -1,20 +1,15 @@
 <nav id="toc" class="toc--container">
     <a id="toc-trigger" class="dropdown--trigger" href="#" data-panel-id="toc-dropdown">Sommaire &blacktriangledown;</a>
-    <div class="dropdown--panel cols three-cols">
-        <BOUCLE_racine1(RUBRIQUES){racine}{par num titre}{1/3}>
+    <div class="dropdown--panel cols two-cols">
+        <BOUCLE_racine1(RUBRIQUES){racine}{par num titre}{1/2}>
         <ol class="toc col">
             <INCLURE{fond=liste/toc,id_rubrique} />
         </ol>
         </BOUCLE_racine1>
-        <BOUCLE_racine2(RUBRIQUES){racine}{par num titre}{2/3}>
+        <BOUCLE_racine2(RUBRIQUES){racine}{par num titre}{2/2}>
         <ol class="toc col">
             <INCLURE{fond=liste/toc,id_rubrique} />
         </ol>
         </BOUCLE_racine2>
-        <BOUCLE_racine3(RUBRIQUES){racine}{par num titre}{3/3}>
-        <ol class="toc col">
-            <INCLURE{fond=liste/toc,id_rubrique} />
-        </ol>
-        </BOUCLE_racine3>
     </div>
 </nav>
