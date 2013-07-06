@@ -1,0 +1,41 @@
+<INCLURE{fond=nav/toc} />
+<BOUCLE_content(ARTICLES){id_article}>
+<BOUCLE_rang_rubrique(RUBRIQUES){id_rubrique}>[(#SET{rang_rubrique,#RANG})]</BOUCLE_rang_rubrique>
+<article class="content-principal">
+    <header>
+        [(#LOGO_ARTICLE|image_reduire{200,200})]
+        [<p class="#EDIT{surtitre} surtitre">(#SURTITRE)</p>]
+        <h1 class="h1 beta #EDIT{titre}">[(#GET{rang_rubrique}).][(#RANG) ]#TITRE</h1>
+        [<p class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</p>]
+    </header>
+    [<div class="chapo">(#CHAPO|image_reduire{650,0})</div>]
+    [<div class="texte">(#TEXTE|image_reduire{650,0})</div>]
+    <footer>
+        [<aside class="notes"><h2><:info_notes:></h2>(#NOTES)</aside>]
+    </footer>
+</article>
+[(#REM) suivant/précédent :
+    - précédent : précédent article de la rubrique précédente ou la rubrique parente
+    - suivant : article suivant de la rubrique ou rubrique suivante
+]
+<nav class="prev-next">
+    <ul class="nav nav--prev-next">
+        <li class="prev">
+            <BOUCLE_precedent(ARTICLES){id_rubrique}{par num titre}{precedent}>
+                <a href="#URL_ARTICLE">précédent</a>
+            </BOUCLE_precedent>
+                <a href="#URL_RUBRIQUE">précédent</a>
+            <//B_precedent>
+        </li>
+        <li class="next">
+            <BOUCLE_suivant(ARTICLES){id_rubrique}{par num titre}{suivant}>
+                <a href="#URL_ARTICLE">suivant</a>
+            </BOUCLE_suivant>
+                <BOUCLE_rubrique_suivante(RUBRIQUES){racine}{par num titre}{suivant}>
+                    <a href="#URL_RUBRIQUE">suivant</a>
+                </BOUCLE_rubrique_suivante>
+            <//B_suivant>
+        </li>
+    </ul>
+</nav>
+</BOUCLE_content>

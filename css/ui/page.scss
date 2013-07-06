@@ -1,0 +1,45 @@
+/*=============================
+=            =page            =
+=============================*/
+
+html {
+    font-family: $base-font-family;
+    font-weight: normal;
+    color: #222;
+}
+
+/*==========  =wrapper  ==========*/
+.wrapper {
+    max-width:1000px;
+    margin-right:auto;
+    margin-left: auto;
+}
+
+.grid--rev {
+    direction: rtl;
+    text-align: left;
+    > .grid__item {
+        direction: ltr;
+        text-align: left;
+    }
+}
+
+/*==========  page-head  ==========*/
+.page-head {
+    position: relative;
+}
+
+/*==========  page-content  ==========*/
+
+
+/*==========  page-foot  ==========*/
+
+/*==========  main  ==========*/
+.main {
+    border-top: 2px solid $border-color;
+    margin-top: -2px;
+    padding-top: $base-spacing-unit;
+}
+
+/*-----  End of =page  ------*/
+

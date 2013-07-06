@@ -1,0 +1,20 @@
+/*============================
+=            base            =
+============================*/
+
+a {
+    color: #0388a6;
+    text-decoration: none;
+    @include vendor(transition, color 0.35s ease-in-out 0.2s);
+    &:visited {}
+    &:hover{color: $brand-color; text-decoration: none;}
+    &:active, &:focus {
+        position: relative; top: 1px;
+   }
+}
+a.active {
+    font-weight: 700;
+}
+
+/*-----  End of base  ------*/
+

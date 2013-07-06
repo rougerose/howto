@@ -1,0 +1,34 @@
+<INCLURE{fond=nav/toc} />
+<BOUCLE_content(RUBRIQUES){id_rubrique}>
+<article class="content-principal">
+    <header>
+        [(#LOGO_RUBRIQUE|image_reduire{200,200})]
+        <h1 class="h1 beta #EDIT{titre}">[(#RANG). ]#TITRE</h1>
+    </header>
+    [<div class="texte">
+        (#TEXTE)
+    </div>]
+</article>
+[<section class="notes">(#NOTES)</section>]
+
+[(#REM) suivant/précédent :
+    - précédent : dernier article de la rubrique précédente ou page d'accueil
+    - suivant : premier article de la rubrique
+]
+<nav class="prev-next">
+    <ul class="nav nav--prev-next">
+        <li class="prev">
+            <BOUCLE_precedent(RUBRIQUES){racine}{par num titre}{precedent}>
+            <a href="#URL_RUBRIQUE">précédent</a>
+            </BOUCLE_precedent>
+            <a href="#URL_SITE_SPIP">précédent</a>
+            <//B_precedent>
+        </li>
+        <li class="next">
+            <BOUCLE_suivant(ARTICLES){id_rubrique}{par num titre}{0,1}>
+            <a href="#URL_ARTICLE">suivant</a>
+            </BOUCLE_suivant>
+        </li>
+    </ul>
+</nav>
+</BOUCLE_content>

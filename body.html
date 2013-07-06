@@ -1,24 +1,21 @@
-<div id="page">
-   <div id="entete" class="cf">
-      <INCLURE{fond=inclure/entete,env}>
-   </div>
-   <div id="nav">
-      <INCLURE{fond=inclure/barre-nav,env}>
-      #FORMULAIRE_RECHERCHE
-   </div>
-
-   <div id="conteneur">
-      <div id="contenu">
-         <INCLURE{fond=contenu/#ENV{type},env}>
-      </div>
-
-      <div id="navigation">
-         <INCLURE{fond=navigation/#ENV{type},env}>
-         <INCLURE{fond=extra/#ENV{type},env}>
-      </div>
-   </div>
-
-   <div id="pied">
-      <INCLURE{fond=inclure/pied,env}>
-   </div>
-</div>
+<body>
+  <header class="page-head" role="banner">
+    <INCLURE{fond=header/#ENV{type-page},env} />
+  </header><!-- .page-head -->
+  <div class="page-content">
+    <div class="wrapper">
+        <div class="grid grid--rev">
+            <div class="grid__item eight-twelfths push--one-twelfth">
+                <div class="main">
+                    <INCLURE{fond=content/#ENV{type-page},env} />
+                </div><!-- .main -->
+            </div><!-- .grid__item --><div class="grid__item three-twelfths">
+                <INCLURE{fond=extra1/#ENV{type-page},env} />
+            </div><!-- .grid__item -->
+        </div><!-- .grid -->
+    </div><!-- .wrapper -->
+  </div><!-- .page-content -->
+  <footer class="page-foot">
+    <INCLURE{fond=footer/#ENV{type-page},env} />
+  </footer><!-- .page-foot -->
+</body>
