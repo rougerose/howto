@@ -1,0 +1,38 @@
+/*===========================
+=            toc            =
+===========================*/
+
+.toc--container {
+    position: relative;
+    padding: 2px 6px 4px 6px;
+    margin-bottom: 1.5em;
+    border: 1px solid #f5f5f5;
+    // @include vendor(border-radius, 5px);
+    background-color: #f5f5f5;
+    .toc {
+        @include font-size(14px);
+        line-height: 1.2;
+    }
+}
+.toc {
+    margin-left: 0;
+    list-style-type: none;
+    ol {
+        margin-left: 1em;
+        list-style-type: none;
+        > li {
+            margin-bottom: 0.5em;
+        }
+    }
+    > li {
+        margin-bottom: 1em;
+        > a {
+            font-weight: 700;
+            line-height: 1.8;
+
+        }
+    }
+}
+
+/*-----  End of toc  ------*/
+

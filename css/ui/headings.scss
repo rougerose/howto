@@ -1,0 +1,13 @@
+/*================================
+=            headings            =
+================================*/
+
+h2.spip {
+    @include font-size($h3-size);
+}
+h3.spip {
+    @include font-size($h4-size);
+}
+
+/*-----  End of headings  ------*/
+

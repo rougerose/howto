@@ -1,0 +1,38 @@
+/*=============================
+=            =MISC            =
+=============================*/
+.push--one-twelfth {
+    position: relative;
+    left:8.333%;
+}
+.push--three-twelfths {
+    position: relative;
+    left: 25%;
+}
+
+/* plugin mediabox/colorbox : content-box au lieu de border-box sur le conteneur sinon l'image est partiellement masquée. */
+#colorbox {
+  &,
+  &:before,
+  &:after{
+      @include vendor(box-sizing, content-box);
+  }
+}
+
+
+/*==========  boutons spip-admin  ==========*/
+body {
+    .spip-admin-bloc,
+    .spip-admin-float {
+        z-index: 99999; top: 10%; left: 0; right: auto;
+    }
+}
+#spip-admin .spip-admin-boutons {
+    font:10px/1 $mono-font-family;
+    display: block;
+    text-align: center;
+    margin-bottom: 5px;
+    border-radius: 0 5px 5px 0;
+}
+
+/*-----  End of =MISC  ------*/
