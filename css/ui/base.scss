@@ -12,7 +12,8 @@ a {
         position: relative; top: 1px;
    }
 }
-a.active {
+a.active,
+.active a {
     font-weight: 700;
 }
 
