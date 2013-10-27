@@ -3,12 +3,12 @@
     <div class="dropdown--panel cols two-cols">
         <BOUCLE_racine1(RUBRIQUES){racine}{par num titre}{1/2}>
         <ol class="toc col">
-            <INCLURE{fond=liste/toc,id_rubrique} />
+            <INCLURE{fond=liste/rubrique-toc,id_rubrique} />
         </ol>
         </BOUCLE_racine1>
         <BOUCLE_racine2(RUBRIQUES){racine}{par num titre}{2/2}>
         <ol class="toc col">
-            <INCLURE{fond=liste/toc,id_rubrique} />
+            <INCLURE{fond=liste/rubrique-toc,id_rubrique} />
         </ol>
         </BOUCLE_racine2>
     </div>
