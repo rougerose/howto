@@ -22,17 +22,17 @@
     <ul class="nav nav--prev-next">
         <li class="prev">
             <BOUCLE_precedent(ARTICLES){id_rubrique}{par num titre}{precedent}>
-                <a href="#URL_ARTICLE">précédent</a>
+                <a href="#URL_ARTICLE"><:local:previous:></a>
             </BOUCLE_precedent>
-                <a href="#URL_RUBRIQUE">précédent</a>
+                <a href="#URL_RUBRIQUE"><:local:previous:></a>
             <//B_precedent>
         </li>
         <li class="next">
             <BOUCLE_suivant(ARTICLES){id_rubrique}{par num titre}{suivant}>
-                <a href="#URL_ARTICLE">suivant</a>
+                <a href="#URL_ARTICLE"><:local:next:></a>
             </BOUCLE_suivant>
                 <BOUCLE_rubrique_suivante(RUBRIQUES){racine}{par num titre}{suivant}>
-                    <a href="#URL_RUBRIQUE">suivant</a>
+                    <a href="#URL_RUBRIQUE"><:local:next:></a>
                 </BOUCLE_rubrique_suivante>
             <//B_suivant>
         </li>

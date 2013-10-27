@@ -10,10 +10,14 @@
 .nav--prev-next {
     @include font-size(14px);
     .prev {
+        a {margin-right: 6px;}
         &:after {
             content: '|';
             color: #ccc;
         }
+    }
+    .next {
+        a {margin-left:6px;}
     }
 }
 
