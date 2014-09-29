@@ -1,21 +1,19 @@
 <body>
-  <header class="page-head" role="banner">
-    <INCLURE{fond=header/#ENV{type-page},env} />
-  </header><!-- .page-head -->
-  <div class="page-content">
-    <div class="wrapper">
-        <div class="grid grid--rev">
-            <div class="grid__item eight-twelfths push--one-twelfth">
-                <div class="main">
+    <header class="page-head" role="banner">
+        <div class="wrapper">
+            <INCLURE{fond=header/#ENV{type-page},env} />
+        </div><!-- /.wrapper -->
+    </header><!-- .page-head -->
+    <div class="page-content">
+        <div class="wrapper">
+            <div class="layout">
+                <div class="layout__item lap-and-up-8/12 lap-and-up-push--4/12 ">
                     <INCLURE{fond=content/#ENV{type-page},env} />
-                </div><!-- .main -->
-            </div><!-- .grid__item --><div class="grid__item three-twelfths">
-                <INCLURE{fond=extra1/#ENV{type-page},env} />
-            </div><!-- .grid__item -->
-        </div><!-- .grid -->
-    </div><!-- .wrapper -->
-  </div><!-- .page-content -->
-  <footer class="page-foot">
-    <INCLURE{fond=footer/#ENV{type-page},env} />
-  </footer><!-- .page-foot -->
+                </div><!-- /.layout__item -->
+            </div><!-- /.layout -->
+        </div><!-- /.wrapper -->
+    </div><!-- .page-content -->
+    <footer class="page-foot">
+      <INCLURE{fond=footer/#ENV{type-page},env} />
+    </footer><!-- .page-foot -->
 </body>

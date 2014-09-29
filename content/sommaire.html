@@ -1,15 +1,14 @@
-<article>
-    <header>
-        <h1>#SLOGAN_SITE_SPIP</h1>
-    </header>
-    [<div class="descriptif">
-        (#DESCRIPTIF_SITE_SPIP)
-    </div>]
-</article>
+[<article>
+    (#DESCRIPTIF_SITE_SPIP)
+</article>]
 [(#REM) TOC ]
 <B_racine>
-<ol class="toc">
-    <BOUCLE_racine(RUBRIQUES){racine}{par num titre}>
-        <INCLURE{fond=liste/toc,id_rubrique} />
+<nav>
+    <h1 class="gamma"><:local:toc:></h1>
+    <ol class="toc">
+    <BOUCLE_racine(RUBRIQUES){racine}>
+        <INCLURE{fond=liste/rubrique-toc,id_rubrique} />
     </BOUCLE_racine>
 </ol>
+</nav>
+</B_racine>

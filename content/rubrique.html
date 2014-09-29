@@ -1,13 +1,25 @@
 <INCLURE{fond=nav/toc} />
 <BOUCLE_content(RUBRIQUES){id_rubrique}>
+#SET{compteur_rubrique,#RANG}
 <article class="content-principal">
     <header>
         [(#LOGO_RUBRIQUE|image_reduire{200,200})]
-        <h1 class="h1 beta #EDIT{titre}">[(#RANG). ]#TITRE</h1>
+        <h1 class="h1 gamma #EDIT{titre}">[(#GET{compteur_rubrique}). ]#TITRE</h1>
     </header>
     [<div class="texte">
         (#TEXTE)
     </div>]
+    [(#REM) TOC ]
+    
+    <B_articles>
+    <ol class="toc">
+        <BOUCLE_articles(ARTICLES){id_rubrique}{par num titre, titre}>
+        #SET{compteur_article,#COMPTEUR_BOUCLE}
+        <INCLURE{fond=liste/article-toc,
+            id_article,compteur_rubrique=#GET{compteur_rubrique},compteur_article=#GET{compteur_article}} />
+        </BOUCLE_articles>
+    </ol>
+    </B_articles>
 </article>
 [<section class="notes">(#NOTES)</section>]
 
@@ -15,18 +27,18 @@
     - précédent : dernier article de la rubrique précédente ou page d'accueil
     - suivant : premier article de la rubrique
 ]
-<nav class="prev-next">
-    <ul class="nav nav--prev-next">
-        <li class="prev">
+<nav>
+    <ul class="prev-next">
+        <li class="prev-next__item prev-next__item--prev">
             <BOUCLE_precedent(RUBRIQUES){racine}{par num titre}{precedent}>
-            <a href="#URL_RUBRIQUE">précédent</a>
+            <a href="#URL_RUBRIQUE"><:local:previous:></a>
             </BOUCLE_precedent>
-            <a href="#URL_SITE_SPIP">précédent</a>
+            <a href="#URL_SITE_SPIP"><:local:previous:></a>
             <//B_precedent>
         </li>
-        <li class="next">
+        <li class="prev-next__item prev-next__item--next">
             <BOUCLE_suivant(ARTICLES){id_rubrique}{par num titre}{0,1}>
-            <a href="#URL_ARTICLE">suivant</a>
+            <a href="#URL_ARTICLE"><:local:next:></a>
             </BOUCLE_suivant>
         </li>
     </ul>

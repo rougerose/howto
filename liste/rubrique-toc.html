@@ -1,0 +1,15 @@
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}>[
+(#SET{compteur_rubrique,[(#RANG|sinon{#COMPTEUR_BOUCLE})]})]
+<li>
+    [(#GET{compteur_rubrique}). ]<a href="#URL_RUBRIQUE">#TITRE</a>
+    <B_articles>
+    <ol>
+        <BOUCLE_articles(ARTICLES){id_rubrique}{par num titre, titre}>
+        #SET{compteur_article,#COMPTEUR_BOUCLE}
+        <INCLURE{fond=liste/article-toc,
+            id_article,compteur_rubrique=#GET{compteur_rubrique},compteur_article=#GET{compteur_article}} />
+        </BOUCLE_articles>
+    </ol>
+    </B_articles>
+</li>
+</BOUCLE_rubrique>

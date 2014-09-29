@@ -1,0 +1,28 @@
+/*  ==========================================================================
+    SITE-NAV
+    ========================================================================== */
+
+
+/**
+ * site-nav--footer 
+ */
+
+.site-nav--footer {
+    margin:  0;
+    padding: 0;
+    list-style: none;
+    border-top: 2px solid $border-color;
+    padding-top: $inuit-base-spacing-unit;
+    @include font-size(12px);
+    text-align: center;
+    // text-transform: uppercase;
+    font-family: $sans-font-family;
+
+    > li {
+        display: inline-block;
+        a {
+            margin-right: $inuit-base-spacing-unit/2;
+            color: lighten(#000,60%);
+        }
+    }
+}
