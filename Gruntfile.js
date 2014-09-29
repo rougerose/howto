@@ -24,6 +24,14 @@ module.exports = function(grunt) {
         }
       }
     },
+    cssmetrics: {
+      common: {
+        src: ['css/styles.min.css'],
+        options: {
+          quiet: false
+        }
+      }
+    },
     watch: {
       grunt: { files: ['Gruntfile.js'] },
       sass: {
@@ -34,8 +42,10 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-css-metrics');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.registerTask('analyse', ['cssmetrics:common']);
   grunt.registerTask('dist', ['sass:dist']);
   grunt.registerTask('dev', ['sass:dev']);
-  grunt.registerTask('default', ['dev','watch']);
+  grunt.registerTask('default', ['dev','watch','analyse']);
 }

@@ -7,6 +7,9 @@ $GLOBALS[$GLOBALS['idx_lang']] = array(
     'next' => 'Suivant',
 
     // P
-    'previous' => 'Précédent'
+    'previous' => 'Précédent',
+
+    // T
+    'toc' => "Sommaire"
     );
 ?>

@@ -5,7 +5,7 @@
     <header>
         [(#LOGO_ARTICLE|image_reduire{200,200})]
         [<p class="#EDIT{surtitre} surtitre">(#SURTITRE)</p>]
-        <h1 class="h1 beta #EDIT{titre}">[(#GET{rang_rubrique}).][(#RANG) ]#TITRE</h1>
+        <h1 class="h1 gamma #EDIT{titre}">[(#GET{rang_rubrique}).][(#RANG) ]#TITRE</h1>
         [<p class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</p>]
     </header>
     [<div class="chapo">(#CHAPO|image_reduire{650,0})</div>]
@@ -18,16 +18,16 @@
     - précédent : précédent article de la rubrique précédente ou la rubrique parente
     - suivant : article suivant de la rubrique ou rubrique suivante
 ]
-<nav class="prev-next">
-    <ul class="nav nav--prev-next">
-        <li class="prev">
+<nav>
+    <ul class="prev-next">
+        <li class="prev-next__item prev-next__item--prev">
             <BOUCLE_precedent(ARTICLES){id_rubrique}{par num titre}{precedent}>
                 <a href="#URL_ARTICLE"><:local:previous:></a>
             </BOUCLE_precedent>
                 <a href="#URL_RUBRIQUE"><:local:previous:></a>
             <//B_precedent>
         </li>
-        <li class="next">
+        <li class="prev-next__item prev-next__item--next">
             <BOUCLE_suivant(ARTICLES){id_rubrique}{par num titre}{suivant}>
                 <a href="#URL_ARTICLE"><:local:next:></a>
             </BOUCLE_suivant>

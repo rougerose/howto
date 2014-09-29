@@ -1,5 +1,5 @@
 <BOUCLE_rubrique(RUBRIQUES){id_rubrique}>[
-(#SET{compteur_rubrique,#RANG})]
+(#SET{compteur_rubrique,[(#RANG|sinon{#COMPTEUR_BOUCLE})]})]
 <li>
     [(#GET{compteur_rubrique}). ]<a href="#URL_RUBRIQUE">#TITRE</a>
     <B_articles>

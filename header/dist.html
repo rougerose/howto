@@ -1,10 +1,14 @@
-<div class="wrapper">
-  <div class="grid">
-    <div class="grid__item">
-      <INCLURE{fond=inclure/logo-site,bloc=header} />
-    </div>
-  </div>
-</div>
-
-
-[(#REM) <INCLURE{fond=nav/nav-principale,env} /> ]
+<div class="layout">
+    <div class="layout__item lap-and-up-4/12">
+        [(#LOGO_SITE_SPIP|oui)
+        [<a href="#URL_SITE_SPIP" class="page-head__item logo-site logo-site--img" rel="start home">
+           <img src="(#LOGO_SITE_SPIP|image_reduire{300,0}|extraire_attribut{src})" alt="[(#NOM_SITE_SPIP|texte_backend)]">
+        </a>]
+        ][(#LOGO_SITE_SPIP|non)
+        <a href="#URL_SITE_SPIP" class="page-head__item logo-site logo-site--text" rel="start home">#NOM_SITE_SPIP</a>
+        ]
+    </div><!-- /.layout__item -->
+    <div class="layout__item lap-and-up-8/12">
+        <p class="page-head__item slogan-site">#SLOGAN_SITE_SPIP</p>
+    </div><!-- /.layout__item -->
+</div><!-- /.layout -->

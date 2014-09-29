@@ -1,0 +1,23 @@
+/* ==========================================================================
+   PREV-NEXT
+   ========================================================================== */
+
+.prev-next {
+    margin:  0;
+    padding: 0;
+    list-style: none;
+    @include font-size(14px);
+}
+.prev-next__item {
+    display:inline-block;
+}
+.prev-next__item--prev {
+    a {margin-right: 6px;}
+    &:after {
+        content: '|';
+        color: #ccc;
+    }
+}
+.prev-next__item--next {
+    a {margin-left:6px;}
+}
