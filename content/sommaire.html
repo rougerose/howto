@@ -6,7 +6,7 @@
 <nav>
     <h1 class="gamma"><:local:toc:></h1>
     <ol class="toc">
-    <BOUCLE_racine(RUBRIQUES){racine}>
+    <BOUCLE_racine(RUBRIQUES){racine}{par num titre, titre}>
         <INCLURE{fond=liste/rubrique-toc,id_rubrique} />
     </BOUCLE_racine>
 </ol>

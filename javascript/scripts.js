@@ -7,6 +7,7 @@ $(document).ready(function() {
         $trigger.click(function(){
             $(this).toggleClass("active");
             $panel.toggleClass("active");
+            return false;
         })
     });
 });

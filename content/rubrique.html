@@ -1,6 +1,6 @@
 <INCLURE{fond=nav/toc} />
 <BOUCLE_content(RUBRIQUES){id_rubrique}>
-#SET{compteur_rubrique,#RANG}
+[(#SET{compteur_rubrique,[(#RANG|ltrim{0})]})]
 <article class="content-principal">
     <header>
         [(#LOGO_RUBRIQUE|image_reduire{200,200})]
