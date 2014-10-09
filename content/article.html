@@ -1,11 +1,11 @@
 <INCLURE{fond=nav/toc} />
 <BOUCLE_content(ARTICLES){id_article}>
-<BOUCLE_rang_rubrique(RUBRIQUES){id_rubrique}>[(#SET{rang_rubrique,#RANG})]</BOUCLE_rang_rubrique>
+<BOUCLE_rang_rubrique(RUBRIQUES){id_rubrique}>[(#SET{rang_rubrique,[(#RANG|ltrim{0})]})]</BOUCLE_rang_rubrique>
 <article class="content-principal">
     <header>
         [(#LOGO_ARTICLE|image_reduire{200,200})]
         [<p class="#EDIT{surtitre} surtitre">(#SURTITRE)</p>]
-        <h1 class="h1 gamma #EDIT{titre}">[(#GET{rang_rubrique}).][(#RANG) ]#TITRE</h1>
+        <h1 class="h1 gamma #EDIT{titre}">[(#GET{rang_rubrique}).][(#RANG|ltrim{0}) ]#TITRE</h1>
         [<p class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</p>]
     </header>
     [<div class="chapo">(#CHAPO|image_reduire{650,0})</div>]

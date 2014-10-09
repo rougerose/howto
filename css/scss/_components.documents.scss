@@ -1,32 +1,30 @@
-/* ==========================================================================
-   DOCUMENTS
-   ========================================================================== */
+/*  ==========================================================================
+    DOCUMENTS
+    ========================================================================== */
 
-   .spip_documents {
-       dt a {
-           display: inline-block;
-       }
-       img {
-           padding: 4px;
-           background-color: #fff;
-           border: 1px solid rgba(0,0,0,0.2);
-           box-shadow: 1px 3px rgba(#000,0.1);
+    .spip_documents {
+        dt a {
+            display: inline-block;
+        }
+        img {
+            padding: 4px;
+            background-color: #fff;
+            border: 1px solid rgba(0,0,0,0.2);
+            box-shadow: 1px 3px rgba(#000,0.1);
        }
    }
-   
+
    .spip_documents_center {
        width: 100%;
        text-align: center;
        dt,
-       dd {
-           margin: 0 auto;
-       }
+       dd {margin-left:auto; margin-right: auto;}
    }
 
    .spip_doc_titre,
    .spip_doc_descriptif {
-       font-family: $sans-font-family;
-       @include font-size(13px);
-       line-height: 1;
+        margin-top: .25em;
+        @include font-size(13px,false);
+        line-height: 1.3;
        color: #999;
    }

@@ -6,6 +6,7 @@
     margin:  0;
     padding: 0;
     list-style: none;
+    font-family: $sans-font-family;
     @include font-size(14px);
 }
 .prev-next__item {
