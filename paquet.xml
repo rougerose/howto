@@ -16,4 +16,5 @@
    <necessite nom="suivant_precedent" />
    <necessite nom="yaml" />
    <necessite nom="ieconfig" />
+   <necessite nom="intertitrestdm" />
 </paquet>
