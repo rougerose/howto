@@ -1,0 +1,10 @@
+// FIXME: import des custom-media ne fonctionnent pas avec Sass
+// media-queries
+// unquote(@custom-media --sm-viewport (min-width: 36.25em);)
+// @custom-media --md-viewport (min-width: 49.375em);
+@custom-media --lg-viewport (min-width: 72em);
+@import url("suitcss-components-grid");
+
+@import url("suitcss-utils-size");
+// @import "node_modules/suitcss-utils-size/lib/size-md";
+// @import "node_modules/suitcss-utils-size/lib/size-lg";

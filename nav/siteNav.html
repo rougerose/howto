@@ -1,0 +1,23 @@
+<B_racine>
+  <div id="js-offcanvas-wrapNav" class="OffCanvas-wrapSiteNav">
+    <nav id="SiteNav" class="SiteNav OffCanvas-siteNav">
+      <h2 class="SiteNav-title"><:howto:menu_titre:></h2>
+      <ol class="SiteNav-list">
+        <BOUCLE_racine(RUBRIQUES){racine}{par num titre}>
+        <li class="SiteNav-listItem">
+          <a class="SiteNav-link" href="#URL_RUBRIQUE">#TITRE</a>
+          <B_articles>
+          <ol class="SiteNav-list">
+              <BOUCLE_articles(ARTICLES){id_rubrique}{par num titre, titre}>
+              <li class="SiteNav-listItem SiteNav-listItem--nest">
+                <a class="SiteNav-link SiteNav-link--nest" href="#URL_ARTICLE">#TITRE</a>
+              </li>
+              </BOUCLE_articles>
+          </ol>
+          </B_articles>
+        </li>
+        </BOUCLE_racine>
+      </ol>
+    </nav>
+  </div>
+</B_racine>

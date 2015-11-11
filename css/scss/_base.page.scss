@@ -1,15 +1,46 @@
-/*  ==========================================================================
-    PAGE
-    ========================================================================== */
-    
+/*  =================================================
+    #PAGE
+    ================================================= */
+/**
+ * https://github.com/inuitcss/base.page
+ */
+
+/**
+ * High-, page-level styling.
+ *
+ * 1. Set the default `font-size` and `line-height` for the entire project,
+ *    sourced from our default variables. The `font-size` is calculated to exist
+ *    in ems, the `line-height` is calculated to exist unitlessly.
+ * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Ensure the page always fills at least the entire height of the viewport.
+ * 4. Prevent certain mobile browsers from automatically zooming fonts.
+ * 5. Fonts on OSX will look more consistent with other systems that do not
+ *    render text using sub-pixel anti-aliasing.
+ */
 html {
-    font-family: $base-font-family;
-    font-weight: normal;
-    color: $color-text;
+  font-size: $font-size-unit; /* [1] */
+  line-height: $line-height-unit / $font-size-unit; /* [1] */
+  background-color: $color-bg;
+  color: $color-text;
+  overflow-y: scroll; /* [2] */
+  // min-height: 100%; /* [3] */
+  height: 100%;
+  // -webkit-text-size-adjust: 100%; /* [4] */
+  //     -ms-text-size-adjust: 100%; /* [4] */
+  // Ce qui suit n'est pas recommandé.
+  // -moz-osx-font-smoothing: grayscale; /* [5] */
+  //  -webkit-font-smoothing: antialiased; /* [5] */
 }
 
-
-
-
-   
-   
+/**
+ * Hauteur des pages (avec peu de contenus)
+ *
+ * hauteur à 100% est nécessaire pour le menu "off-canvas" et surtout le contenu
+ * qui apparait avec un couleur de fond et qui sera animé (vers la droite).
+ * html doit donc être à height 100% et body min-height 100%.
+ * voir notamment:
+ * http://stackoverflow.com/questions/10947541/applying-a-background-to-html-and-or-body/10947583#10947583
+ */
+body { height: 100%; }

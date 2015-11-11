@@ -1,0 +1,16 @@
+/*  =================================================
+    #SITECONTENT
+    ================================================= */
+
+/** @define Container */
+
+/**
+ * Conteneur principal des contenus du site (hors navigation principale)
+ *
+ */
+
+.SiteContent {
+  max-width: 50em;
+  margin: 0 auto;
+  padding: 0 $spacing-unit;
+}

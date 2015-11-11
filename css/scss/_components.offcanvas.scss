@@ -1,0 +1,65 @@
+/*  =================================================
+    #OFFCANVAS
+    ================================================= */
+
+/** @define OffCanvas */
+
+.OffCanvas {
+  overflow-x: hidden;
+}
+
+  .OffCanvas-wrapSiteNav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    background-color: $color-blue-dark;
+    overflow-y: auto;
+    visibility: hidden;
+    transition: visibility 0s 0.7s;
+
+    &.is-opened {
+      visibility: visible;
+      transition: visibility 0s 0s;
+    }
+  }
+
+    .OffCanvas-siteNav {
+      height: 100%;
+      backface-visibility: hidden;
+      transform: translateZ(0) translateX(-50%);
+      transition: transform 0.7s;
+      transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78);
+
+      &.is-opened {
+        transform: translateX(0);
+        transition: transform 0.5s ease;
+      }
+    }
+
+  .OffCanvas-wrapSiteContent {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    background-color: $color-white;
+    overflow-y: auto;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: transform 0.7s;
+    transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78);
+
+    &.is-opened {
+      transform: translateX(100%);
+    }
+  }
+
+  .OffCanvas-trigger {
+    position: fixed;
+    z-index: 3;
+    top: 100px;
+    left: 20px;
+    color: $color-white;
+    background: $color-blue-dark;
+  }

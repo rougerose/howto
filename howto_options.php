@@ -9,6 +9,7 @@ if (!defined('_ECRIRE_INC_VERSION')) return;
 
 // en dev, pas de cache
 // define('_NO_CACHE', 1);
+$GLOBALS['z_blocs'] = array('content','head','header','footer');
 
 // prefix cookie si spip est dans un sous-répertoire
 $cookie_prefix = "howto";

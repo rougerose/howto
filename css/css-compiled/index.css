@@ -1,0 +1,836 @@
+@charset "UTF-8";
+/**!
+ * HOWTO styles
+ * version: 0.2.0
+ */
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block; }
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block; }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none; }
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent; }
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0; }
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em; }
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap; }
+
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019"; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sup {
+  top: -0.5em; }
+
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */ }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default; }
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/**
+ * A thin layer on top of normalize.css that provides a starting point more
+ * suitable for web applications.
+ */
+/**
+ * Prevent margin and border from affecting element width.
+ * https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ * `input[type="search"]` overrides normalize.css more specific rule.
+ */
+html {
+  box-sizing: border-box; }
+
+*,
+*::before,
+*::after,
+input[type="search"] {
+  box-sizing: inherit; }
+
+/**
+ * Removes the default spacing and border for appropriate elements.
+ */
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+p,
+pre {
+  margin: 0; }
+
+button {
+  background: transparent;
+  border: 0;
+  padding: 0; }
+
+/**
+ * Work around a Firefox/IE bug where the transparent `button` background
+ * results in a loss of the default `button` focus styles.
+ */
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color; }
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+iframe {
+  border: 0; }
+
+ol,
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+/**
+ * Suppress the focus outline on elements that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ */
+[tabindex="-1"]:focus {
+  outline: none !important; }
+
+/*  =================================================
+    #PAGE
+    ================================================= */
+/**
+ * https://github.com/inuitcss/base.page
+ */
+/**
+ * High-, page-level styling.
+ *
+ * 1. Set the default `font-size` and `line-height` for the entire project,
+ *    sourced from our default variables. The `font-size` is calculated to exist
+ *    in ems, the `line-height` is calculated to exist unitlessly.
+ * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Ensure the page always fills at least the entire height of the viewport.
+ * 4. Prevent certain mobile browsers from automatically zooming fonts.
+ * 5. Fonts on OSX will look more consistent with other systems that do not
+ *    render text using sub-pixel anti-aliasing.
+ */
+html {
+  font-size: 16px;
+  /* [1] */
+  line-height: 1.25;
+  /* [1] */
+  background-color: #fff;
+  color: #444;
+  overflow-y: scroll;
+  /* [2] */
+  height: 100%; }
+
+/**
+ * Hauteur des pages (avec peu de contenus)
+ *
+ * hauteur à 100% est nécessaire pour le menu "off-canvas" et surtout le contenu
+ * qui apparait avec un couleur de fond et qui sera animé (vers la droite).
+ * html doit donc être à height 100% et body min-height 100%.
+ * voir notamment:
+ * http://stackoverflow.com/questions/10947541/applying-a-background-to-html-and-or-body/10947583#10947583
+ */
+body {
+  height: 100%; }
+
+/*  =================================================
+    #TYPE
+    ================================================= */
+html {
+  font-family: "Merriweather", serif; }
+
+/*  =================================================
+    #LINKS
+    ================================================= */
+a {
+  color: #513ac2;
+  text-decoration: none;
+  transition: color .15s ease; }
+  a:hover {
+    color: #c23a5f;
+    text-decoration: underline; }
+
+/*  =================================================
+    #OFFCANVAS
+    ================================================= */
+/** @define OffCanvas */
+.OffCanvas {
+  overflow-x: hidden; }
+
+.OffCanvas-wrapSiteNav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background-color: #243040;
+  overflow-y: auto;
+  visibility: hidden;
+  transition: visibility 0s 0.7s; }
+  .OffCanvas-wrapSiteNav.is-opened {
+    visibility: visible;
+    transition: visibility 0s 0s; }
+
+.OffCanvas-siteNav {
+  height: 100%;
+  backface-visibility: hidden;
+  transform: translateZ(0) translateX(-50%);
+  transition: transform 0.7s;
+  transition-timing-function: cubic-bezier(0.86, 0.01, 0.77, 0.78); }
+  .OffCanvas-siteNav.is-opened {
+    transform: translateX(0);
+    transition: transform 0.5s ease; }
+
+.OffCanvas-wrapSiteContent {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  background-color: #fff;
+  overflow-y: auto;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.7s;
+  transition-timing-function: cubic-bezier(0.82, 0.01, 0.77, 0.78); }
+  .OffCanvas-wrapSiteContent.is-opened {
+    transform: translateX(100%); }
+
+.OffCanvas-trigger {
+  position: fixed;
+  z-index: 3;
+  top: 100px;
+  left: 20px;
+  color: #fff;
+  background: #243040; }
+
+/*  =================================================
+    #SITECONTENT
+    ================================================= */
+/** @define Container */
+/**
+ * Conteneur principal des contenus du site (hors navigation principale)
+ *
+ */
+.SiteContent {
+  max-width: 50em;
+  margin: 0 auto;
+  padding: 0 20px; }
+
+/*  =================================================
+    #HEADER
+    ================================================= */
+/** @define Header */
+.Header {
+  margin: 0 auto; }
+
+/*  =================================================
+    #CONTENT
+    ================================================= */
+/** @define Content */
+.Content {
+  margin: 0 auto; }
+
+/*  =================================================
+    #LOGO
+    ================================================= */
+/** @define Logo */
+.Logo {
+  color: #243040; }
+
+.Logo-title {
+  display: block;
+  font-size: 48px;
+  font-weight: 300; }
+
+.Logo-baseline {
+  color: rgba(58, 165, 194, 0.9);
+  font-size: 22px;
+  font-style: italic; }
+
+/*  =================================================
+    #SITENAV
+    ================================================= */
+/** @define SiteNav */
+.SiteNav {
+  padding: 80px 10%; }
+
+.SiteNav-title {
+  margin-bottom: 20px;
+  color: #000;
+  font-family: "Merriweather Sans", sans-serif;
+  font-weight: 300; }
+
+.SiteNav-listItem {
+  margin: 20px 0;
+  font-size: 20px; }
+
+.SiteNav-listItem--nest {
+  margin: 10px;
+  font-size: 14px; }
+
+.SiteNav-link {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 300; }
+
+.SiteNav-link--nest {
+  color: rgba(58, 165, 194, 0.5); }
+
+/*  =================================================
+    #LEAD
+    ================================================= */
+/** @define Lead */
+.Lead {
+  color: #999;
+  font-size: 22px;
+  font-style: italic;
+  font-weight: 300; }
+
+/** @define utilities */
+/**
+ * Clean link
+ *
+ * A link without any text-decoration at all.
+ */
+.u-linkClean,
+.u-linkClean:hover,
+.u-linkClean:focus,
+.u-linkClean:active {
+  text-decoration: none !important; }
+
+/**
+ * Link complex
+ *
+ * A common pattern is to have a link with several pieces of text and/or an
+ * icon, where only one piece of text should display the underline when the
+ * link is the subject of user interaction.
+ *
+ * Example HTML:
+ *
+ * <a class="u-linkComplex" href="#">
+ *   Link complex
+ *   <span class="u-linkComplexTarget">target</span>
+ * </a>
+ */
+.u-linkComplex,
+.u-linkComplex:hover,
+.u-linkComplex:focus,
+.u-linkComplex:active {
+  text-decoration: none !important; }
+
+.u-linkComplex:hover .u-linkComplexTarget,
+.u-linkComplex:focus .u-linkComplexTarget,
+.u-linkComplex:active .u-linkComplexTarget {
+  text-decoration: underline !important; }
+
+/**
+ * Block-level link
+ *
+ * Combination of traits commonly used in vertical navigation lists.
+ */
+.u-linkBlock,
+.u-linkBlock:hover,
+.u-linkBlock:focus,
+.u-linkBlock:active {
+  display: block !important;
+  text-decoration: none !important; }
+
+/* @end */
+.u-posAbsolute {
+  position: absolute !important; }
+
+/**
+ * Pins to all corners by default. But when a width and/or height are
+ * provided, the element will be centered in its nearest relatively-positioned
+ * ancestor.
+ */
+.u-posAbsoluteCenter {
+  bottom: 0 !important;
+  left: 0 !important;
+  margin: auto !important;
+  position: absolute !important;
+  right: 0 !important;
+  top: 0 !important; }
+
+/**
+ * 1. Make sure fixed elements are promoted into a new layer, for performance
+ *    reasons.
+ */
+.u-posFixed {
+  position: fixed !important;
+  backface-visibility: hidden;
+  /* 1 */ }
+
+.u-posRelative {
+  position: relative !important; }
+
+.u-posStatic {
+  position: static !important; }
+
+/**
+ * @define utilities
+ * Sizing utilities
+ */
+/* Intrinsic widths
+   ========================================================================== */
+/**
+ * Make an element fill the remaining space.
+ *
+ * 1. Be explicit to work around IE10 bug with shorthand flex - http://git.io/vllC7
+ * 2. IE10 ignores previous `flex-basis` value. Setting again here fixes - http://git.io/vllMt
+ */
+.u-sizeFill {
+  flex: 1 1 0% !important;
+  /* 1 */
+  flex-basis: 0% !important;
+  /* 2 */ }
+
+/**
+ * Make an element the width of its parent.
+ */
+.u-sizeFull {
+  box-sizing: border-box !important;
+  display: block !important;
+  width: 100% !important; }
+
+/* Proportional widths
+   ========================================================================== */
+/**
+ * Specify the proportional width of an object.
+ * Intentional redundancy build into each set of unit classes.
+ * Supports: 2, 3, 4, 5, 6, 8, 10, 12 part
+ *
+ * Uses `flex-basis: auto` with a width to avoid box-sizing bug in IE10/11 - http://git.io/vllMD
+ */
+.u-size1of12 {
+  flex-basis: auto !important;
+  width: calc(100% * 1 / 12) !important; }
+
+.u-size1of10 {
+  flex-basis: auto !important;
+  width: 10% !important; }
+
+.u-size1of8 {
+  flex-basis: auto !important;
+  width: 12.5% !important; }
+
+.u-size1of6,
+.u-size2of12 {
+  flex-basis: auto !important;
+  width: calc(100% * 1 / 6) !important; }
+
+.u-size1of5,
+.u-size2of10 {
+  flex-basis: auto !important;
+  width: 20% !important; }
+
+.u-size1of4,
+.u-size2of8,
+.u-size3of12 {
+  flex-basis: auto !important;
+  width: 25% !important; }
+
+.u-size3of10 {
+  flex-basis: auto !important;
+  width: 30% !important; }
+
+.u-size1of3,
+.u-size2of6,
+.u-size4of12 {
+  flex-basis: auto !important;
+  width: calc(100% * 1 / 3) !important; }
+
+.u-size3of8 {
+  flex-basis: auto !important;
+  width: 37.5% !important; }
+
+.u-size2of5,
+.u-size4of10 {
+  flex-basis: auto !important;
+  width: 40% !important; }
+
+.u-size5of12 {
+  flex-basis: auto !important;
+  width: calc(100% * 5 / 12) !important; }
+
+.u-size1of2,
+.u-size2of4,
+.u-size3of6,
+.u-size4of8,
+.u-size5of10,
+.u-size6of12 {
+  flex-basis: auto !important;
+  width: 50% !important; }
+
+.u-size7of12 {
+  flex-basis: auto !important;
+  width: calc(100% * 7 / 12) !important; }
+
+.u-size3of5,
+.u-size6of10 {
+  flex-basis: auto !important;
+  width: 60% !important; }
+
+.u-size5of8 {
+  flex-basis: auto !important;
+  width: 62.5% !important; }
+
+.u-size2of3,
+.u-size4of6,
+.u-size8of12 {
+  flex-basis: auto !important;
+  width: calc(100% * 2 / 3) !important; }
+
+.u-size7of10 {
+  flex-basis: auto !important;
+  width: 70% !important; }
+
+.u-size3of4,
+.u-size6of8,
+.u-size9of12 {
+  flex-basis: auto !important;
+  width: 75% !important; }
+
+.u-size4of5,
+.u-size8of10 {
+  flex-basis: auto !important;
+  width: 80% !important; }
+
+.u-size5of6,
+.u-size10of12 {
+  flex-basis: auto !important;
+  width: calc(100% * 5 / 6) !important; }
+
+.u-size7of8 {
+  flex-basis: auto !important;
+  width: 87.5% !important; }
+
+.u-size9of10 {
+  flex-basis: auto !important;
+  width: 90% !important; }
+
+.u-size11of12 {
+  flex-basis: auto !important;
+  width: calc(100% * 11 / 12) !important; }

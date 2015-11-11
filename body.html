@@ -1,19 +1,16 @@
-<body>
-    <header class="page-head" role="banner">
-        <div class="wrapper">
-            <INCLURE{fond=header/#ENV{type-page},env} />
-        </div><!-- /.wrapper -->
-    </header><!-- .page-head -->
-    <div class="page-content">
-        <div class="wrapper">
-            <div class="layout">
-                <div class="layout__item lap-and-up-8/12 lap-and-up-push--4/12 ">
-                    <INCLURE{fond=content/#ENV{type-page},env} />
-                </div><!-- /.layout__item -->
-            </div><!-- /.layout -->
-        </div><!-- /.wrapper -->
-    </div><!-- .page-content -->
-    <footer class="page-foot">
-      <INCLURE{fond=footer/#ENV{type-page},env} />
-    </footer><!-- .page-foot -->
+[(#SET{class,[page_(#ENV{type-page,page})[ #ENV{type-page,page}_(#ENV{composition,''})]][ composition_(#ENV{composition})]})]
+<body id="js-offcanvas" class="[(#ENV{type-page}|oui)page-body] [(#GET{class})] OffCanvas">
+  <a id="js-offcanvas-trigger" href="#SiteNav" class="OffCanvas-trigger">Sommaire</a>
+  <INCLURE{fond=nav/siteNav, env} />
+  <div id="js-offcanvas-wrapContent" class="OffCanvas-wrapSiteContent">
+    <div class="SiteContent Container">
+      <header class="Header" role="banner">
+        <INCLURE{fond=header/#ENV{type-page}, env} />
+      </header>
+      <main class="Content">
+        <INCLURE{fond=content/#ENV{type-page}, env} />
+      </main>
+      <INCLURE{fond=footer/#ENV{type-page}, env} />
+    </div>
+  </div>
 </body>

@@ -1,22 +1,44 @@
 {
   "name": "howto",
-  "version": "0.1.2",
-  "description": "plugin Spip, howto : documentation",
+  "version": "0.2.0",
+  "description": "Documentation en ligne.",
   "main": "index.js",
+  "dependencies": {
+    "normalize-css": "^2.3.1",
+    "suitcss-base": "^1.0.1",
+    "suitcss-components-grid": "^3.0.0",
+    "suitcss-utils-link": "^0.5.2",
+    "suitcss-utils-position": "^0.2.2",
+    "suitcss-utils-size": "^0.8.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.1.0",
+    "del": "^2.0.2",
+    "gulp": "^3.9.0",
+    "gulp-clip-empty-files": "^0.1.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^6.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0",
+    "postcss-bem-linter": "^2.1.0",
+    "postcss-calc": "^5.0.0",
+    "postcss-custom-media": "^5.0.0",
+    "postcss-custom-properties": "^5.0.0",
+    "postcss-import": "^7.1.3",
+    "postcss-pxtorem": "^3.1.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/rougerose/howto.git"
+    "url": "git+https://github.com/rougerose/howto.git"
   },
-  "author": "christophe le drean",
-  "license": "MIT",
-  "private": true,
-  "devDependencies": {
-    "grunt": "^0.4.5",
-    "grunt-contrib-sass": "^0.8.1",
-    "grunt-contrib-watch": "^0.6.1",
-    "grunt-css-metrics": "^0.1.2"
-  }
+  "author": "Christophe Le Drean",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/rougerose/howto/issues"
+  },
+  "homepage": "https://github.com/rougerose/howto#readme"
 }

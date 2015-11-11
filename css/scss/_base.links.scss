@@ -1,18 +1,13 @@
-/*  ==========================================================================
-    LINKS
-    ========================================================================== */
-
+/*  =================================================
+    #LINKS
+    ================================================= */
 a {
-    color: $color-links;
-    text-decoration: none;
-    @include transition(color 0.35s ease-in-out 0.2s);
-    &:visited {}
-    &:hover{color: $color-main; text-decoration: none;}
-    &:active, &:focus {
-        position: relative; top: 1px;
-   }
-}
-a.active,
-.active a {
-    font-weight: 700;
+  color: $color-link;
+  text-decoration: none;
+  transition: color .15s ease;
+
+  &:hover {
+    color: $color-hover;
+    text-decoration: underline;
+  }
 }

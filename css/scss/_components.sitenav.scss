@@ -1,0 +1,37 @@
+/*  =================================================
+    #SITENAV
+    ================================================= */
+
+/** @define SiteNav */
+
+.SiteNav {
+  padding: 80px 10%;
+}
+
+  .SiteNav-title {
+    margin-bottom: $spacing-unit;
+    color: $color-black;
+    font-family: $font-family-sans;
+    font-weight: 300;
+  }
+
+  .SiteNav-list {}
+
+    .SiteNav-listItem {
+      margin: $spacing-unit 0;
+      font-size: 20px;
+    }
+
+    .SiteNav-listItem--nest {
+      margin: $spacing-unit--small;
+      font-size: 14px;
+    }
+
+      .SiteNav-link {
+        color: rgba($color-white, 0.6);
+        font-weight: 300;
+      }
+
+      .SiteNav-link--nest {
+        color: rgba($color-blue, 0.5);
+      }
