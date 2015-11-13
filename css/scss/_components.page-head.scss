@@ -9,13 +9,12 @@
 .page-head__item {
     padding: $spacing-unit--small 0;
     border-bottom: 2px solid $border-color;
-    @include font-size(24px,false);
+    @include font-size(22px,false);
     line-height: 30px;
     font-weight: bold;
     text-align: center;
-    
+
     @include media-query(lap-and-up) {
-        @include font-size(36px,false);
         padding: $spacing-unit 0;
         text-align: left;
     }
@@ -25,7 +24,7 @@
 
 
 /**
- * logo-site 
+ * logo-site
  */
 
 .logo-site {
@@ -42,7 +41,7 @@
 
 
 /**
- * slogan-site 
+ * slogan-site
  */
 
 .slogan-site {
@@ -51,6 +50,6 @@
 
     @include media-query(lap-and-up) {
         padding: $spacing-unit + 4px 0 $spacing-unit - 4px;
-        @include font-size(24px,false);
+        // @include font-size(24px,false);
     }
 }
