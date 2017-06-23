@@ -1,0 +1,49 @@
+// =====================================
+// pagination
+// =====================================
+
+.c-pagination {
+  margin: $spacing-unit 0;
+}
+
+
+  // ----- variante: prevnext ----- //
+
+  .c-pagination--prevnext {
+    text-align: center;
+  }
+
+
+//
+// item
+// -------------------------------------
+
+.c-pagination__item {}
+
+
+  // ----- variante: prev ----- //
+
+  .c-pagination__item--prev {
+    margin-right: $spacing-unit;
+  }
+
+
+  // ----- variante: next ----- //
+
+  .c-pagination__item--next {
+    margin-right: $spacing-unit;
+  }
+
+
+//
+// link
+// -------------------------------------
+
+.c-pagination__link {
+  display: block;
+
+  &.is-disabled {
+    color: $color-disabled;
+    cursor: not-allowed;
+  }
+}

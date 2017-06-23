@@ -1,0 +1,39 @@
+// =====================================
+// globals
+// =====================================
+
+//
+// InuitCSS
+// -------------------------------------
+
+// ----- wrapper ----- //
+$inuit-wrapper-width: 900px;
+
+
+// ----- layout ----- //
+$inuit-fractions: 2 3 4;
+$inuit-use-markup-fix: true;
+
+
+// ----- mediaqueries ----- //
+$mq-breakpoints: (
+  mobile:     320px, // 20em
+  tablet:     640px, // 40em
+  desktop:    960px  // 60em
+);
+
+
+//
+// App
+// -------------------------------------
+
+// ----- Fonts ----- //
+$font-base:  'Noticia Text', georgia, serif;
+$font-mono:  monospace;
+$font-sans:  'Roboto', 'Helvetica Neue', helvetica, arial, sans-serif;
+
+
+// ----- Transitions ----- //
+
+$global-transition: 0.3s;
+$global-transition-function: ease-out;

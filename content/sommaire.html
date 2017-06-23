@@ -1,14 +1,14 @@
-[<article>
+[<div class="">
     (#DESCRIPTIF_SITE_SPIP)
-</article>]
-[(#REM) TOC ]
+</div>]
+
 <B_racine>
-<nav>
-    <h1 class="gamma"><:local:toc:></h1>
-    <ol class="toc">
-    <BOUCLE_racine(RUBRIQUES){racine}{par num titre, titre}>
-        <INCLURE{fond=liste/rubrique-toc,id_rubrique} />
-    </BOUCLE_racine>
-</ol>
-</nav>
+  <nav class="c-toc">
+    <h1 class="c-toc__heading"><:howto:toc:></h1>
+    <ol class="c-toc__list">
+      <BOUCLE_racine(RUBRIQUES){racine}{par num titre, titre}>
+        #INCLURE{fond=inclure/toc-rubrique,id_rubrique}
+      </BOUCLE_racine>
+    </ol>
+  </nav>
 </B_racine>

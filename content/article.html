@@ -1,41 +1,39 @@
-<INCLURE{fond=nav/toc} />
+#INCLURE{fond=inclure/toc}
+
 <BOUCLE_content(ARTICLES){id_article}>
-<BOUCLE_rang_rubrique(RUBRIQUES){id_rubrique}>[(#SET{rang_rubrique,[(#RANG|ltrim{0})]})]</BOUCLE_rang_rubrique>
-<article class="content-principal">
+  <BOUCLE_rang_rubrique(RUBRIQUES){id_rubrique}>[(#SET{rang_rubrique,[(#RANG|ltrim{0})]})]</BOUCLE_rang_rubrique>
+  <article class="c-article">
+
     <header>
-        [(#LOGO_ARTICLE|image_reduire{200,200})]
-        [<p class="#EDIT{surtitre} surtitre">(#SURTITRE)</p>]
-        <h1 class="h1 gamma #EDIT{titre}">[(#GET{rang_rubrique}).][(#RANG|ltrim{0}) ]#TITRE</h1>
-        [<p class="#EDIT{soustitre} soustitre">(#SOUSTITRE)</p>]
+      [<p class="#EDIT{surtitre} c-article__surtitre">(#SURTITRE)</p>]
+      <h1 class="#EDIT{titre} c-article__titre">[(#GET{rang_rubrique}). ][(#RANG|ltrim{0}). ]#TITRE</h1>
+      [<p class="#EDIT{soustitre} c-article__soustitre">(#SOUSTITRE)</p>]
     </header>
-    [<div class="chapo">(#CHAPO|image_reduire{650,0})</div>]
-    [<div class="texte">(#TEXTE|image_reduire{650,0})</div>]
-    <footer>
-        [<aside class="notes"><h2><:info_notes:></h2>(#NOTES)</aside>]
-    </footer>
-</article>
-[(#REM) suivant/précédent :
-    - précédent : précédent article de la rubrique précédente ou la rubrique parente
-    - suivant : article suivant de la rubrique ou rubrique suivante
-]
-<nav>
-    <ul class="prev-next">
-        <li class="prev-next__item prev-next__item--prev">
-            <BOUCLE_precedent(ARTICLES){id_rubrique}{par num titre}{precedent}>
-                <a href="#URL_ARTICLE"><:local:previous:></a>
-            </BOUCLE_precedent>
-                <a href="#URL_RUBRIQUE"><:local:previous:></a>
-            <//B_precedent>
+
+    [<div class="c-article__chapo">(#CHAPO|image_reduire{756,0})</div>]
+
+    [<div class="c-article__texte">(#TEXTE|image_reduire{756,0})</div>]
+
+    [<aside class="c-article__notes"><h2><:info_notes:></h2>(#NOTES)</aside>]
+
+    <nav class="c-nav c-pagination c-pagination--prevnext" role="navigation">
+      <ul class="c-nav__list">
+        <li class="c-nav__list-item c-pagination__item c-pagination__item--prev">
+          <BOUCLE_precedent_article(ARTICLES){id_rubrique}{precedent}{par date}>
+            <a href="#URL_ARTICLE" class="c-pagination__link"><:howto:previous:></a>
+          </BOUCLE_precedent_article>
+            <span class="c-pagination__link is-disabled"><:howto:previous:></span>
+          <//B_precedent_article>
+        </li
+        ><li class="c-nav__list-item c-pagination__item c-pagination__item--next">
+          <BOUCLE_suivant_article(ARTICLES){id_rubrique}{suivant}{par date}>
+            <a href="#URL_ARTICLE" class="c-pagination__link"><:howto:next:></a>
+          </BOUCLE_suivant_article>
+            <span class="c-pagination__link is-disabled"><:howto:next:></span>
+          <//B_suivant_article>
         </li>
-        <li class="prev-next__item prev-next__item--next">
-            <BOUCLE_suivant(ARTICLES){id_rubrique}{par num titre}{suivant}>
-                <a href="#URL_ARTICLE"><:local:next:></a>
-            </BOUCLE_suivant>
-                <BOUCLE_rubrique_suivante(RUBRIQUES){racine}{par num titre}{suivant}>
-                    <a href="#URL_RUBRIQUE"><:local:next:></a>
-                </BOUCLE_rubrique_suivante>
-            <//B_suivant>
-        </li>
-    </ul>
-</nav>
+      </ul>
+    </nav>
+  </article>
+
 </BOUCLE_content>

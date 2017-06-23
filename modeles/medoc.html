@@ -1,0 +1,59 @@
+<BOUCLE_doc(DOCUMENTS){id_document}{tout}>
+[(#REM)
+
+	Modele CONSTANT pour <doc> en dl/dt/dd
+	cf. http://pompage.net/pompe/listesdefinitions/
+
+	La largeur du titre est egale a la largeur de la vignette,
+	avec un minimum de 120px et un maximum de 350px.
+
+]
+
+[(#SET{fichier,[(#LOGO_DOCUMENT)]})]
+[(#SET{url,#URL_DOCUMENT})]
+[(#SET{titre,[(#TITRE|sinon{[(#FICHIER|basename)]})]})]
+[(#SET{title,[(#GET{titre}|couper{80})][ (#MODELE{info_document})]})]
+[(#SET{alt,[(#GET{title})]})]
+
+[(#REM)
+
+	Dans le cas d'une simple image, on affiche sa vignette,
+	avec lien vers la version originale, si elle est plus grande.
+
+]
+[(#EXTENSION|match{jpg|gif|png}|oui)
+	[(#SET{fichier,[(#FICHIER|image_reduire{#CONFIG{taille_preview,150}})]})]
+	[(#SET{titre,''})]
+	[(#LARGEUR|>{#CONFIG{taille_preview,150}}|?{
+		[(#SET{url,#URL_DOCUMENT})]
+		[(#SET{title,[(#TITRE|sinon{[(#FICHIER|basename)]}|couper{80})]})]
+		[(#SET{alt,[(#GET{title})]})]
+	,
+		[(#SET{url,''})]
+		[(#SET{title,''})]
+		[(#SET{alt,[(#TITRE|couper{60})]})]
+	})]
+]
+
+#SET{width,#GET{fichier}|largeur}
+#SET{height,#GET{fichier}|hauteur}
+#SET{fichier,#GET{fichier}|extraire_attribut{src}}
+
+[(#ENV{largeur}|oui)
+  #SET{fichier, #FICHIER|image_reduire{#ENV{largeur}, 0}}
+  #SET{width,#GET{fichier}|largeur}
+  #SET{height,#GET{fichier}|hauteur}
+  #SET{fichier,#GET{fichier}|extraire_attribut{src}}
+]
+
+  <figure class="spip_document_#ID_DOCUMENT spip_documents[ spip_documents_(#ENV{align})][ (#ENV{class})] c-figure [c-figure--(#ENV{align})]">
+    [<a href="(#GET{url})"[ class="(#ENV{lien_class})"]>][<img src="(#GET{fichier})" alt="[(#TITRE|ou{#DESCRIPTIF}|ou{#CREDITS}|sinon{document})]" class="c-figure__img">][(#GET{url}|?{</a>})]
+      [(#TITRE|ou{#DESCRIPTIF}|ou{#CREDITS}|oui)
+      <figcaption class="spip_doc_legende c-figure__caption"[ style="width:(#GET{width})px;"]>
+          [<h3 class="#EDIT{titre} spip_doc_titre c-figure__title">(#TITRE)</h3>][(#DESCRIPTIF|ou{#CREDITS}|oui)
+              [<p class="spip_doc_descriptif c-figure__descriptif #EDIT{descriptif}">(#DESCRIPTIF|PtoBR)</p>]
+              [<p class="c-figure__author #EDIT{credits}">(#CREDITS)</p>]
+          ]
+      </figcaption>]
+  </figure>
+</BOUCLE_doc>

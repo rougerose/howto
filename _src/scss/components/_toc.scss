@@ -1,0 +1,104 @@
+// =====================================
+// toc
+// =====================================
+
+.c-toc {
+  margin-bottom: $spacing-unit-large;
+}
+
+
+  // ----- Variante dropdown ----- //
+
+  .c-toc--dropdown {
+    position: relative;
+    margin-bottom: $spacing-unit-large;
+    padding: $spacing-unit-small 0;
+    background-color: $color-gallery;
+    @include inuit-font-size(15px);
+  }
+
+
+//
+// dropdown
+// -------------------------------------
+
+.c-toc__dropdown {
+  margin-left: $spacing-unit-tiny;
+  padding: $spacing-unit-small $spacing-unit-small $spacing-unit-tiny;
+
+  .js .js-toc & {
+    border: 1px solid $color-alto;
+    margin-top: -3px;
+    position: absolute;
+    z-index: 199;
+    width: 99%;
+    background-color: $color-white;
+    box-shadow: 0 1px 2px rgba($color-alto, 0.5);
+    opacity: 0;
+    transition: opacity $global-transition $global-transition-function;
+
+    &.is-active {
+      opacity: 1;
+    }
+  }
+}
+
+
+//
+// trigger
+// -------------------------------------
+
+.c-toc__trigger {
+  border: 1px solid transparent;
+  border-bottom: none;
+  margin: $spacing-unit-tiny;
+  padding: $spacing-unit-tiny $spacing-unit-small 0;
+  position: relative;
+  z-index: 200;
+
+  .js &.is-active {
+    background-color: $color-white;
+    border-color: $color-alto;
+  }
+}
+
+//
+// heading
+// -------------------------------------
+
+.c-toc__heading {
+  color: $color-red;
+  @include inuit-font-size(24px);
+}
+
+
+//
+// list
+// -------------------------------------
+
+.c-toc__list {
+  list-style: none;
+  margin-left: 0;
+
+  > li {
+    margin-bottom: $spacing-unit;
+
+    li {
+      margin-bottom: $spacing-unit-small;
+    }
+  }
+
+  ol {
+    list-style: inherit;
+    margin-left: $spacing-unit-small;
+  }
+}
+
+
+// ----- variante: dropdown ----- //
+
+.c-toc__list--dropdown {
+  @include mq(tablet) {
+    columns: 2 auto;
+  }
+}

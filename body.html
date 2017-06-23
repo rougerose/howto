@@ -1,19 +1,13 @@
 <body>
-    <header class="page-head" role="banner">
-        <div class="wrapper">
-            <INCLURE{fond=header/#ENV{type-page},env} />
-        </div><!-- /.wrapper -->
-    </header><!-- .page-head -->
-    <div class="page-content">
-        <div class="wrapper">
-            <div class="layout">
-                <div class="layout__item lap-and-up-8/12 lap-and-up-push--4/12 ">
-                    <INCLURE{fond=content/#ENV{type-page},env} />
-                </div><!-- /.layout__item -->
-            </div><!-- /.layout -->
-        </div><!-- /.wrapper -->
-    </div><!-- .page-content -->
-    <footer class="page-foot">
+  <div class="o-wrapper">
+    <header class="c-page__header">
+      <INCLURE{fond=header/#ENV{type-page},env} />
+    </header>
+    <main class="c-page__content">
+      <INCLURE{fond=content/#ENV{type-page},env} />
+    </main>
+    <footer class="c-page__foot">
       <INCLURE{fond=footer/#ENV{type-page},env} />
-    </footer><!-- .page-foot -->
+    </footer>
+  </div>
 </body>

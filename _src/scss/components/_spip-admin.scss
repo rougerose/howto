@@ -1,0 +1,16 @@
+// =====================================
+// spip-admin
+// =====================================
+
+
+.spip-admin-float {
+  right: 0 !important;
+  top: auto !important;
+  bottom: 0;
+
+  .spip-admin-boutons {
+    font-family: $font-mono;
+    @include inuit-font-size(13px, 1);
+    text-align: left;
+  }
+}

@@ -1,12 +1,3 @@
-<div class="wrapper">
-    <div class="layout">
-        <div class="layout__item">
-            <ul class="site-nav--footer">
-                <li><a href="http://www.spip.net/" title=""><:site_realise_avec_spip:></a></li>
-                [<li>(#SESSION{id_auteur}|oui)<a href="#URL_LOGOUT" rel="nofollow"><:icone_deconnecter:></a></li>]
-                [<li>(#SESSION{id_auteur}|non)<a href="[(#URL_PAGE{login}|parametre_url{url,#SELF|parametre_url{url,''}})]" rel="nofollow" class='login_modal'><:lien_connecter:></a></li>]
-                [<li>(#AUTORISER{ecrire})<a href="#EVAL{_DIR_RESTREINT_ABS}"><:espace_prive:></a></li>]
-            </ul>
-        </div>
-    </div>
+<div class="c-footer-site">
+  <a href="http://www.spip.net/" class="c-footer-site__item"><:site_realise_avec_spip:></a>[<a href="#URL_LOGOUT" rel="nofollow" class="c-footer-site__item">(#SESSION{id_auteur}|oui)<:icone_deconnecter:></a>][<a href="[(#URL_PAGE{login}|parametre_url{url,#SELF|parametre_url{url,''}})]" rel="nofollow" class="login_modal c-footer-site__item">(#SESSION{id_auteur}|non)<:lien_connecter:></a>][<a href="[(#EVAL{_DIR_RESTREINT_ABS})]" class="c-footer-site__item"> (#AUTORISER{ecrire})<:espace_prive:></a>]
 </div>

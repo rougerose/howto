@@ -7,9 +7,7 @@
 [(#REM) Mobile viewport optimized: h5bp.com/viewport ]
 <meta name="viewport" content="width=device-width,minimum-scale=1.0">
 [(#REM) Lien vers le flux RSS du site ]
-[<link rel="alternate" type="application/rss+xml" title="<:syndiquer_site:>" href="(#URL_PAGE{backend})" />]
-[(#REM) Fonts ]
-<link href='http://fonts.googleapis.com/css?family=Noto+Sans|Noticia+Text:400,400italic,700,700italic|Roboto:400,300' rel='stylesheet' type='text/css'>
+[(#REM)[<link rel="alternate" type="application/rss+xml" title="<:syndiquer_site:>" href="(#URL_PAGE{backend})" />]]
 [(#REM) Balise permettant aux plugins d'inserer des fichiers CSS ]
 #INSERT_HEAD_CSS
 [(#CHEMIN{inc-theme-head.html}|oui)
@@ -21,9 +19,3 @@
     si l'option est cochee dans Configuration
 ]
 #INSERT_HEAD
-[(#REM) Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons ]
-[<link rel="stylesheet" href="(#CSS{css/styles.min.css})" type="text/css" />]
-[<script src="(#CHEMIN{javascript/scripts.js})"></script>]
-
-[<link rel="icon" type="image/x-icon" href="(#CHEMIN{favicon.ico})" />
-[<link rel="shortcut icon" type="image/x-icon" href="(#CHEMIN{favicon.ico})" />]]
