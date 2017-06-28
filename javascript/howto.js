@@ -4,7 +4,7 @@ $(document).ready(function() {
         $trigger = $toc.find('.c-toc__trigger'),
         $drop = $toc.find('.c-toc__dropdown');
 
-    $trigger.click(function() {
+    $trigger.click(function(event) {
       event.preventDefault();
       $(this).toggleClass('is-active');
       $drop.toggleClass('is-active');
