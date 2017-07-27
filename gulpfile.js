@@ -82,7 +82,7 @@ gulp.task( 'compile:scss', function () {
     .pipe( plumberNotifier() )
     .pipe( sass({
       includePaths: options.scss.paths,
-      outputStyle: 'compact'
+      outputStyle: 'compressed'
     }) )
     .pipe( autoprefixer({
       browsers: [ 'last 2 versions' ],

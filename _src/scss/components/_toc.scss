@@ -28,6 +28,7 @@
 
   .js .js-toc & {
     border: 1px solid $color-alto;
+    display: none;
     margin-top: -3px;
     position: absolute;
     z-index: 199;
@@ -38,6 +39,7 @@
     transition: opacity $global-transition $global-transition-function;
 
     &.is-active {
+      display: block;
       opacity: 1;
     }
   }
