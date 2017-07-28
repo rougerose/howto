@@ -1,7 +1,7 @@
 <paquet
    prefix="howto"
    categorie="squelette"
-   version="0.2"
+   version="0.2.1"
    etat="dev"
    compatibilite="[3.1.0;3.1.*]"
    logo="prive/themes/spip/images/howto-64.png"
