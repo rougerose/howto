@@ -1,10 +1,8 @@
 # fichiers systemes
 .DS_Store
 
-# fichiers textmate
-.tm_properties
-
 # node et bower
 /bower_components
 /node_modules
 .sass-cache
+yarn.lock

@@ -1,0 +1,26 @@
+// =====================================
+// c-figure
+// =====================================
+
+.c-figure {
+  img {
+    border: 1px solid rgba($color-gray, 0.5);
+  }
+}
+
+
+// ----- variantes d'alignement ----- //
+
+.c-figure--left {
+  texte-align: left;
+}
+
+
+.c-figure--right {
+  text-align: right;
+}
+
+
+.c-figure--center {
+  text-align: center;
+}

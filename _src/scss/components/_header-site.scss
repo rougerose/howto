@@ -1,0 +1,25 @@
+// =====================================
+// header-site
+// =====================================
+
+.c-header-site {}
+
+
+//
+// home
+// -------------------------------------
+
+.c-header-site__home {
+  @include inuit-font-size(30px);
+}
+
+
+//
+// baseline
+// -------------------------------------
+
+.c-header-site__baseline {
+  color: $color-gray;
+  @include inuit-font-size(16px);
+  font-style: italic;
+}

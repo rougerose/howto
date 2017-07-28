@@ -1,0 +1,34 @@
+// =====================================
+// footer-site
+// =====================================
+
+
+.c-footer-site {
+  border-top: 1px solid $color-alto;
+  padding-top: $spacing-unit-tiny;
+  text-align: center;
+}
+
+
+//
+// item
+// -------------------------------------
+
+.c-footer-site__item {
+  display: inline-block;
+  margin-left: $spacing-unit-tiny;
+  color: $color-gray;
+  @include inuit-font-size(14px);
+
+  &:before {
+    content: ' / ';
+    display: inline-block;
+    margin-right: 8px;
+  }
+
+  &:first-child {
+    &:before {
+      content: '';
+    }
+  }
+}

@@ -1,0 +1,25 @@
+// =====================================
+// article
+// =====================================
+
+.c-article {
+  @include mq(tablet) {
+    padding: 0 $spacing-unit-large;
+  }
+}
+
+
+//
+// titre
+// -------------------------------------
+
+.c-article__titre {
+  color: $color-red;
+  @include inuit-font-size(26px);
+}
+
+//
+// text
+// -------------------------------------
+
+.c-article__text {}

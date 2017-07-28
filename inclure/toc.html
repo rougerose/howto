@@ -1,0 +1,12 @@
+<nav class="c-toc c-toc--dropdown js-toc">
+  <a href="#" class="c-toc__trigger"><:howto:chapters:> &blacktriangledown;</a>
+  <div class="c-toc__dropdown">
+    <B_rubriques_1>
+      <ol class="c-toc__list c-toc__list--dropdown">
+        <BOUCLE_rubriques_1(RUBRIQUES){racine}{par num titre, titre}>
+          #INCLURE{fond=inclure/toc-rubrique,id_rubrique}
+        </BOUCLE_rubriques_1>
+      </ol>
+    </B_rubriques_1>
+  </div>
+</nav>

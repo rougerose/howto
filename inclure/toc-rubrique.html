@@ -1,0 +1,12 @@
+<BOUCLE_rubrique(RUBRIQUES){id_rubrique}>
+  [(#SET{rang_rubrique, #RANG|ltrim{0}})]
+  <li>[(#GET{rang_rubrique}). ]<a href="#URL_RUBRIQUE">#TITRE</a>
+    <B_articles>
+      <ol>
+        <BOUCLE_articles(ARTICLES){id_rubrique}{par num titre, titre}>
+          [<li>[[(#GET{rang_rubrique}). ](#RANG|ltrim{0}). ]<a href="#URL_ARTICLE">(#TITRE)</a></li>]
+        </BOUCLE_articles>
+      </ol>
+    </B_articles>
+  </li>
+</BOUCLE_rubrique>

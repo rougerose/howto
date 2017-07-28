@@ -1,20 +1,25 @@
 <paquet
    prefix="howto"
    categorie="squelette"
-   version="0.1.6"
+   version="0.2-alpha"
    etat="dev"
-   compatibilite="[3.0.2;3.0.*]"
+   compatibilite="[3.1.0;3.1.*]"
    logo="prive/themes/spip/images/howto-64.png"
-   schema="0.5.3"
 >
    <nom>How to</nom>
    <auteur lien="http://rouge-rose.net">Christophe le drean</auteur>
    <auteur lien="http://thenounproject.com/term/book/1300/">Logo de John Caserta pour The Noun Project</auteur>
-   <licence>GNU/GPL</licence>
+   <licence lien="http://www.gnu.org/licenses/gpl-3.0.html">GPL 3</licence>
    <necessite nom="Zcore" />
-   <necessite nom="Z5" />
    <necessite nom="suivant_precedent" />
-   <necessite nom="yaml" />
-   <necessite nom="ieconfig" />
+   <necessite nom="medoc" />
+   <necessite nom="bellespuces" />
+   <!-- <necessite nom="yaml" /> -->
+   <!-- <necessite nom="ieconfig" /> -->
    <necessite nom="intertitrestdm" />
+   <spip compatibilite="[3.1.0;3.1.*]">
+     <style type="public" source="https://fonts.googleapis.com/css?family=Noticia+Text:400,400i,700,700i" />
+     <style type="public" source="css/howto.css" />
+     <script type="public" source="javascript/howto.js" />
+  </spip>
 </paquet>
